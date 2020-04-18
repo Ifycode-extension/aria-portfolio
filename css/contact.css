@@ -1,0 +1,4 @@
+
+section.contact div.form{
+    grid-column: 4/ span 6;
+}

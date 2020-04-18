@@ -1,0 +1,16 @@
+
+section.about div.photo {
+    grid-column: 1/ span 6;
+}
+
+section.about div.description {
+    grid-column: 7/ span 6;
+}
+
+section.about p {
+    margin: 16px 0;
+}
+
+section.about h1 {
+    text-align: unset;
+}

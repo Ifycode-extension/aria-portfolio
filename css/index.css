@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Ubuntu&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    color: white;
+    background: #02150D;
+    width: 1128px;
+    margin: 79px auto 100px auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1, nav, footer {
+    font-family: 'Marmelad', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+h2 {
+    font-family: 'Marmelad', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 16px 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0 0 29px;
+    transition: color 0.4s;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -ms-transition: color 0.4s;
+    -o-transition: color 0.4s;
+}
+
+a:hover, a.selected{
+    color: #FFFC53;
+}
+
+section {
+    margin: 90px 0 90px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 32px;
+    grid-auto-flow: dense;
+}
+
+section h1 {
+    grid-column: 2/ span 10;
+    text-align: center;
+}
+
+section.project img {
+    max-height: 640px;
+}
+
+section.project div.artwork {
+    grid-column: 1/ span 8;
+    text-align: center;
+}
+
+section.project div.description {
+    grid-column: 9/ span 4;
+}
+
+section.project-alt div.artwork {
+    grid-column: 5/ span 8;
+}
+
+section.project-alt div.description {
+    grid-column: 1/ span 4;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    margin: 0 14.5px 0 14.5px;
+    color: #7ce0b7;
+}
