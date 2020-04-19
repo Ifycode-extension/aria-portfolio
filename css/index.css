@@ -37,6 +37,8 @@ h1, nav, footer {
     line-height: 1.25;
 }
 
+
+
 h2 {
     font-family: 'Marmelad', sans-serif;
     font-size: 28px;
@@ -49,15 +51,17 @@ a {
     color: white;
     text-decoration: none;
     margin: 0 0 0 28px;
-    transition: color 0.4s;
-    -webkit-transition: color 0.4s;
-    -moz-transition: color 0.4s;
-    -ms-transition: color 0.4s;
-    -o-transition: color 0.4s;
+    border-bottom: 2px solid transparent;
+    transition: color 0.4s, border 0.2s;
+    -webkit-transition: color 0.4s, border 0.2s;
+    -moz-transition: color 0.4s, border 0.2s;
+    -ms-transition: color 0.4s, border 0.2s;
+    -o-transition: color 0.4s, border 0.2s;
 }
 
 a:hover, a.selected{
     color: #FFFC53;
+    border-bottom: 2px solid #FFFC53;
 }
 
 section {
@@ -107,15 +111,20 @@ footer a {
 
 
 
+@media (max-width: 1280px) {
+    h1, nav, footer {
+        font-size: 28px;
+    }
 
-.absolute {
-    position: absolute;
-    top: 0;
-    right: 50%;
     
-}
-.show-width {
-    color: yellow;
+    h2 {
+        font-size: 22px;
+    }
+
+    header img{
+        max-width: 300px;
+    }
+
 }
 
 /*1128px + 64px + 64px = 1256px
@@ -128,15 +137,6 @@ margin left & right*/
         margin: 80px 64px 100px 64px;
     }
 
-    h1, nav, footer {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-
 }
 
 @media (max-width: 940px) {
@@ -145,12 +145,15 @@ margin left & right*/
         flex-direction: column;
     }
 
-    nav {
-        margin: 24px 0 0 0;
+    h1, nav, footer {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
     }
 
-    header img{
-        max-width: 300px;
+    nav {
+        margin: 24px 0 0 0;
     }
 
     header a {
@@ -171,16 +174,22 @@ margin left & right*/
     section.project div.description {
         grid-column: 1/ span 4;
     }
+
+    section.project div.artwork {
+        margin: 0 0 16px 0;
+     }
+     
    
 }
 
 @media (max-width: 500px) {
 
     body {
-        margin: 48px 32px 48px 32px;
+        margin: 40px 28px 64px 28px;
     }
+
     header img {
-        width: 100%;
+        width: 90%;
     }
 
     header a {
@@ -194,5 +203,22 @@ margin left & right*/
         justify-content: center;
     }
 
+    section:nth-of-type(1) {
+        margin: 56px 0 64px 0;
+    }
 
 }
+
+
+/*
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    
+}
+.show-width {
+    color: yellow;
+}
+
+*/

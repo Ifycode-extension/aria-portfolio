@@ -3,6 +3,41 @@ section.contact div.form{
     grid-column: 4/ span 6;
 }
 
+section.contact h1 {
+    text-align: left;
+} 
+
+input, textarea {
+    width: 100%;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #7ce0b7;
+}
+
+label {
+    display: block;
+    margin: 16px 0;
+}
+
+textarea {
+    height: 320px;
+}
+
+button {
+    padding: 8px 20px;
+    background: #077644;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Marmelad', sans-serif;
+}
+
+
 @media (max-width: 800px) {
     section.contact div.form{
         grid-column: 1/ span 4;

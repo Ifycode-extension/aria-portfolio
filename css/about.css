@@ -20,5 +20,9 @@ section.about h1 {
     section.about div.description {
         grid-column: 1/ span 4;
     }
+
+    section.about div.photo {
+        margin: 0 0 16px 0;
+     }
    
 }
