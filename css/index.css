@@ -132,6 +132,11 @@ margin left & right*/
         font-size: 24px;
     }
 
+    h2 {
+        font-size: 20px;
+    }
+
+
 }
 
 @media (max-width: 940px) {
@@ -156,6 +161,7 @@ margin left & right*/
 
 @media (max-width: 800px) {
     section {
+        margin: 64px 0 64px 0;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px 24px;
     }
@@ -171,7 +177,7 @@ margin left & right*/
 @media (max-width: 500px) {
 
     body {
-        margin: 60px 48px 50px 48px;
+        margin: 48px 32px 48px 32px;
     }
     header img {
         width: 100%;
