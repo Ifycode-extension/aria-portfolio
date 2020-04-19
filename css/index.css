@@ -17,7 +17,7 @@ body {
     color: white;
     background: #02150D;
     width: 1128px;
-    margin: 79px auto 100px auto;
+    margin: 80px auto 100px auto;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
     line-height: 1.5;
@@ -25,6 +25,7 @@ body {
 
 header {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -47,7 +48,7 @@ h2 {
 a {
     color: white;
     text-decoration: none;
-    margin: 0 0 0 29px;
+    margin: 0 0 0 28px;
     transition: color 0.4s;
     -webkit-transition: color 0.4s;
     -moz-transition: color 0.4s;
@@ -102,4 +103,90 @@ footer {
 footer a {
     margin: 0 14.5px 0 14.5px;
     color: #7ce0b7;
+}
+
+
+
+
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    
+}
+.show-width {
+    color: yellow;
+}
+
+/*1128px + 64px + 64px = 1256px
+initial body width + new 
+margin left & right*/
+
+@media (max-width: 1256px) {
+    body {
+        width: auto;
+        margin: 80px 64px 100px 64px;
+    }
+
+    h1, nav, footer {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 940px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin: 24px 0 0 0;
+    }
+
+    header img{
+        max-width: 300px;
+    }
+
+    header a {
+        margin: 0 14px 0 14px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px 24px;
+    }
+
+    section h1,
+    section.project div.artwork,
+    section.project div.description {
+        grid-column: 1/ span 4;
+    }
+   
+}
+
+@media (max-width: 500px) {
+
+    body {
+        margin: 60px 48px 50px 48px;
+    }
+    header img {
+        width: 100%;
+    }
+
+    header a {
+        margin: 7px 0 0 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }

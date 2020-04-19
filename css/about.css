@@ -14,3 +14,11 @@ section.about p {
 section.about h1 {
     text-align: unset;
 }
+
+@media (max-width: 800px) {
+    section.about div.photo,
+    section.about div.description {
+        grid-column: 1/ span 4;
+    }
+   
+}
