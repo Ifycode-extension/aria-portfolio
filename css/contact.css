@@ -7,7 +7,7 @@ section.contact h1 {
     text-align: left;
 } 
 
-input, textarea {
+.form-input, textarea {
     width: 100%;
     background: transparent;
     color: #ffffff;
@@ -15,7 +15,7 @@ input, textarea {
     padding: 8px 16px;
 }
 
-input:focus, textarea:focus {
+.form-input:focus, textarea:focus {
     outline: none;
     border: 2px solid #7ce0b7;
 }
@@ -26,15 +26,29 @@ label {
 }
 
 textarea {
-    height: 320px;
+    height: 250px;
 }
 
-button {
+.form-button {
     padding: 8px 20px;
     background: #077644;
     color: #ffffff;
     font-size: 24px;
     font-family: 'Marmelad', sans-serif;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+
+.form-button:hover {
+   color: #FFFC53;
+   transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
 }
 
 
@@ -42,5 +56,12 @@ button {
     section.contact div.form{
         grid-column: 1/ span 4;
     }
-   
+}
+
+@media (max-width: 595px) {
+    .form-button {
+        padding: 8px 20px;
+        color: #ffffff;
+        font-size: 21.5px;
+    }
 }

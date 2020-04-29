@@ -1,5 +1,17 @@
 
+/*========Initial styling===========*/
+
 @import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Ubuntu&display=swap');
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Marmelad;
+    src: url(../fonts/Marmelad-Regular.ttf);
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -12,11 +24,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    background: #02150D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: white;
-    background: #02150D;
     width: 1128px;
-    margin: 80px auto 100px auto;
+    margin: 80px auto 150px auto;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
     line-height: 1.5;
@@ -46,21 +65,33 @@ h2 {
     margin: 0 0 16px 0;
 }
 
+
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
     margin: 0 0 0 28px;
     border-bottom: 2px solid transparent;
-    transition: color 0.4s, border 0.2s;
-    -webkit-transition: color 0.4s, border 0.2s;
-    -moz-transition: color 0.4s, border 0.2s;
-    -ms-transition: color 0.4s, border 0.2s;
-    -o-transition: color 0.4s, border 0.2s;
+    transition: color 0.4s, 
+                border 0.2s, 
+                transform 0.2s ease-in-out;
+    -webkit-transition: color 0.4s, border 0.2s, transform 0.2s ease-in-out;
+    -moz-transition: color 0.4s, border 0.2s, transform 0.2s ease-in-out;
+    -ms-transition: color 0.4s, border 0.2s, transform 0.2s ease-in-out;
+    -o-transition: color 0.4s, border 0.2s, transform 0.2s ease-in-out;
 }
 
 nav a:hover, nav a.selected{
     color: #FFFC53;
     border-bottom: 2px solid #FFFC53;
+}
+
+a:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 section {
@@ -87,6 +118,7 @@ section.project div.artwork {
 
 section.project div.description {
     grid-column: 9/ span 4;
+    
 }
 
 section.project-alt div.artwork {
@@ -99,62 +131,241 @@ section.project-alt div.description {
 
 footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 footer a {
-    margin: 0 14.5px 0 14.5px;
+    margin: 0 0 0 28px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+footer div {
+    margin: 0 0 20px 0;
+    transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -ms-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
 }
 
 footer img {
     width: 70%;
 }
 
+.input {
+    opacity: 0;
+}
 
+.link, .copy-link {
+    background: white;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.link {
+    border: 2px solid transparent;
+}
+
+.copy-link {
+    background: #077644;
+    color: #ffffff;
+}
+
+.copy-link:hover {
+    color: #FFFC53;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.link:focus {
+    outline: none;
+    border: 2px solid #7ce0b7;
+}
+
+footer a:nth-of-type(3) img {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.comment-box {
+    font-size: 17px;
+    color: #FFFC53;
+    height: 25px;
+}
+
+
+footer p {
+   font-size: 15px;
+   color: rgba(255, 255, 255, 0.8);
+}
+
+footer p > a {
+    margin: 0;
+    color: #7ce0b7;
+    text-decoration: none;
+}
+
+
+
+/*========== manipulation ==========*/
+
+.appear {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.disappear {
+    opacity: 0.5;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
+
+.transition {
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+.no-transition {
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+.show-input {
+    opacity: 1;
+}
+
+.share {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.add-opacity {
+    opacity: 1;   
+}
+
+.remove-opacity {
+    opacity: 0;
+}
+
+
+
+
+/*============ Media Query ===========*/
 
 @media (max-width: 1280px) {
-    h1, nav, footer {
-        font-size: 28px;
+    body {
+        width: 900px;
+        margin: 100px auto 85px auto;
     }
 
+    h1, nav, footer {
+        font-size: 26px;
+    }
     
     h2 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     header img{
-        max-width: 300px;
+        max-width: 230px;
+    }
+    
+    section.project img {
+        max-height: 520px;
+    }
+    
+    section.project div.artwork {
+        grid-column: 1/ span 7;
+        text-align: center;
+    }
+    
+    section.project div.description {
+        grid-column: 8/ span 5;
+    }
+    
+    section.project-alt div.artwork {
+        grid-column: 6/ span 7;
+    }
+    
+    section.project-alt div.description {
+        grid-column: 1/ span 5;
     }
 
+    footer img {
+        width: 65%;
+    }
 }
 
-/*1128px + 64px + 64px = 1256px
-initial body width + new 
-margin left & right*/
+/*====== Reminder: 1128px + 64px + 64px = 1256px
+initial body width + new margin left & right====*/
 
 @media (max-width: 1256px) {
+   
     body {
         width: auto;
-        margin: 80px 64px 100px 64px;
+        margin: 100px 160px 85px 160px;
+        font-size: 16px;
+        font-weight: 300;
     }
-
-   
-
-
+    
+    section.project img {
+        max-height: 450px;
+    }
 }
 
 @media (max-width: 940px) {
+
+    body {
+        margin: 85px 90px;
+    }
 
     header {
         flex-direction: column;
     }
 
-    h1, nav, footer {
-        font-size: 24px;
-    }
-    h2 {
-        font-size: 20px;
+    section:nth-of-type(1) {
+        margin: 60px 0 60px 0;
     }
 
     nav {
@@ -169,10 +380,21 @@ margin left & right*/
 
 
 @media (max-width: 800px) {
+
+    body {
+        margin: 80px 110px;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
     section {
-        margin: 64px 0 64px 0;
+        margin: 80px 0 80px 0;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px 24px;
+    }
+
+    section:nth-of-type(1) {
+        margin: 50px 0;
     }
 
     section h1,
@@ -185,29 +407,39 @@ margin left & right*/
         margin: 0 0 16px 0;
      }
 
+     section.project img {
+        max-height: 545px;
+    }
+
      footer a {
-        margin: 0 0 0 5px;
+        margin: 0 0 0 16px;
      }
 
-     footer a:nth-of-type(1) {
-        margin: 0 0 0 29px;
-     }
+     
+      footer > div:nth-of-type(1) {
+        margin: 0 0 20px 20px;
+      }
+  
+
+     footer a:nth-of-type(3) {
+        margin: 0 0 0 8px;
+      }
 
      footer img {
         width: 60%;
     }
-     
-   
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 595px) {
 
     body {
-        margin: 40px 28px 64px 28px;
+        margin: 70px 60px 70px 60px;
     }
 
     header img {
-        width: 90%;
+        width: 77%;
     }
 
     header a {
@@ -221,22 +453,39 @@ margin left & right*/
         justify-content: center;
     }
 
-    section:nth-of-type(1) {
-        margin: 56px 0 64px 0;
+    h1, nav, footer {
+        font-size: 22px;
     }
 
+    h2 {
+        font-size: 18px;
+    }
+
+    section:nth-of-type(1) {
+        margin: 45px 0;
+    }
+
+    section.project img {
+        max-height: 525px;
+    }
+
+    footer img {
+        width: 57%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 70px 35px;
+     }
+
+    footer img {
+        width: 55%;
+    }
+
+    .link {
+        width: 170px;
+    }
 }
 
 
-/*
-.absolute {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    
-}
-.show-width {
-    color: yellow;
-}
-
-*/
