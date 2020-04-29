@@ -1,17 +1,7 @@
 
 /*========Initial styling===========*/
 
-@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Ubuntu&display=swap');
-
-@font-face {
-    font-family: Ubuntu;
-    src: url(../fonts/Ubuntu-Regular.ttf);
-}
-
-@font-face {
-    font-family: Marmelad;
-    src: url(../fonts/Marmelad-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Ubuntu:wght@300;400&display=swap');
 
 ::-webkit-scrollbar {
     display: none;
@@ -487,5 +477,18 @@ initial body width + new margin left & right====*/
         width: 170px;
     }
 }
+
+/*
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Marmelad;
+    src: url(../fonts/Marmelad-Regular.ttf);
+}
+
+*/
 
 
