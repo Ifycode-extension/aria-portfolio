@@ -1,7 +1,7 @@
 ## Aria's Portfolio website
 ### About project
 My version of Aria Oslo's website built while taking the superhi plan, design + code your first website course. Built with html, 
-css and a little of vanilla javascript. Has three pages: portfolio page, about page and contact page. 
+css and vanilla javascript. Has three pages: portfolio page, about page and contact page. 
 View live on [Github Pages](https://ifycode.github.io/Aria-portfolio/).
 
 ### Design 
