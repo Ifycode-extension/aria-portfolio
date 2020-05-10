@@ -9,4 +9,4 @@ About page mockup below. Other pictures uploaded on [Figma](https://www.figma.co
 and designed with Figma.
 
 
-![About Page Mockup](./readmeExtension/about-page.png)
+![About Page Mockup](./readmeExtension/home-page.png)
